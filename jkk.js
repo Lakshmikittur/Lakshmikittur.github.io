@@ -102,7 +102,7 @@ function calculate()
                     else if(parseInt(secondPart[0]) < 5)
                     {
                         var x = num-Math.floor(num);
-                        num-= x+1;
+                        num-= x+1.0;
                        // cout<<"(int)secondPart[0])"<<stoi(to_string(secondPart[0]))-48<<endl;
                          //cout<<"case 2 < 5 num  "<<num<<"x is"<<x<<endl;
                         pieces.push(Number((x+1).toFixed(2)));
@@ -122,7 +122,7 @@ function calculate()
                         piecess.push("Series 2");
                     }
 
-            case 1: if(secondPart[1]!='0')
+            case 1: if(secondPart[0]!='0')
                     {
                         for(var x = 24.5;x>=0.5;x=x-0.5)
                         {
