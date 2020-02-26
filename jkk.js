@@ -173,7 +173,7 @@ function calculate()
                     }
                     else if(v>=0.5 && v<=24.5)
                     {
-                        pieces.push(v);
+                        pieces.push(Number((y).toFixed(1)));
                         piecess.push("Series 3");
                         v-=v;
                     }
