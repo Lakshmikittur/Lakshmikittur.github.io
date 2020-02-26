@@ -77,11 +77,33 @@ function calculate()
         console.log(secondlen);
         switch(secondlen)
         {
-            case 4: num-=1.0005;
+            case 4: if(parseInt(secondPart[3]) == 5)
+                    {
+                    num-=1.0005;
                     pieces.push(1.0005);
                     piecess.push("Series 5");
                     console.log(num+ " case 4");
                     //cout<<"case 4 "<<num<<endl;
+                    }
+                    else if(parseInt(secondPart[3])<5)
+                    {
+                        //ignore
+                    }
+                    else
+                    {
+                        console.log("in else part case 4");
+                       num = Number((num).toFixed(3));
+                       var tokens= num.toString().split(".");
+                        console.log("tokens is"+tokens);
+                       firstPart=tokens[0];
+                       if(num.toString().indexOf(".")!= -1 ){
+                        secondPart=tokens[1];
+                       }
+                       else{
+                           secondPart = "000";
+                       }
+
+                    }
                     
 
             case 3: if(secondPart[2]!='0'){
@@ -122,7 +144,7 @@ function calculate()
                         piecess.push("Series 2");
                     }
 
-            case 1: if(secondPart[0]!='0')
+            case 1: if(secondPart[0]!='0') //changed secondPart[1] to secondPart[0]
                     {
                         for(var x = 24.5;x>=0.5;x=x-0.5)
                         {
