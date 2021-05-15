@@ -1,2 +1,2 @@
 # Lakshmikittur.github.io
-A website to select the minimum number of slip guages to build the required dimension.
+This is my personnal website built with bootstrap.Visit https://lakshmikittur.github.io/ to go to this website.
